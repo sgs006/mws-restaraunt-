@@ -24,8 +24,9 @@ li {
   font-size: 10pt;
   color: #333;
 }
-a {
-  color: orange;
+button {
+  background-color: orange;
+  color: white;
   text-decoration: none;
 }
 a:hover,
@@ -45,6 +46,7 @@ h6 {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0 0 20px;
 }
+
 article,
 aside,
 canvas,
@@ -203,7 +205,7 @@ nav h1 a {
   min-height: 248px;
   min-width: 100%;
 }
-#restaurants-list li h1 {
+#restaurants-list li h3 {
   color: #f18200;
   font-family: Arial, sans-serif;
   font-size: 14pt;

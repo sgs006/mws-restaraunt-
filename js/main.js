@@ -2,6 +2,17 @@ let restaurants, neighborhoods, cuisines;
 var newMap;
 var markers = [];
 
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("/sw.js")
+    .then(reg => {
+      console.log("Service worker registration successful: " + reg.scope);
+    })
+    .catch(error => {
+      console.log("Registration failed: " + error);
+    });
+}
+
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
@@ -173,7 +184,7 @@ createRestaurantHTML = restaurant => {
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
 
-  const name = document.createElement("h1");
+  const name = document.createElement("h3");
   name.innerHTML = restaurant.name;
   li.append(name);
 
@@ -185,12 +196,13 @@ createRestaurantHTML = restaurant => {
   address.innerHTML = restaurant.address;
   li.append(address);
 
-  const more = document.createElement("a");
+  const more = document.createElement("button");
   more.innerHTML = "View Details";
-  more.href = DBHelper.urlForRestaurant(restaurant);
-  more.tabIndex = "3";
+  more.onclick = function() {
+    const url = DBHelper.urlForRestaurant(restaurant);
+    window.location = url;
+  };
   li.append(more);
-
   return li;
 };
 
