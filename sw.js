@@ -21,6 +21,7 @@ let myCache = [
   "/js/dbhelper.js"
 ];
 
+//install service worker
 self.addEventListener("install", function(event) {
   event.waitUntil(
     caches
