@@ -1,4 +1,7 @@
-# Mobile Web Specialist Certification Course
+# Udacity Restaraunt Reviews App 
+
+The purpose of this project was to get used to refactoring code for a webpage to make it more responsive and mobile-ready. I worked to refactor the HTML/CSS so the project was more readable, had proper accessibility, and generally looked better. I also refactored the code to make the site work offline by adding a service worker. 
+
 ---
 #### _Three Stage Course Material Project - Restaurant Reviews_
 
@@ -30,4 +33,3 @@ Most of the code in this project has been written to the ES6 JavaScript specific
 
 
 
-"# mws-restaraunt-" 
